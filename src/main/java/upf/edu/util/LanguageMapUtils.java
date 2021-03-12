@@ -1,7 +1,11 @@
 package upf.edu.util;
 
+import java.util.Arrays;
+
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
+
+import scala.Tuple2;
 
 public class LanguageMapUtils {
 

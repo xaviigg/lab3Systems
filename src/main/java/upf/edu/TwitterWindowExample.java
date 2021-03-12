@@ -28,7 +28,12 @@ public class TwitterWindowExample {
         // Create a window with a duration of 30 seconds (will contain 3 micro-batches)
         final JavaDStream<Status> windowedStream = stream.window(Durations.seconds(30));
 
+        //Operating only on the current micro-batch
+        //I am gonna print how many tweets I have received in the interval of 10sec
         stream.count().print();
+        
+        //Now I will count all the values that I have received in the WINDOW
+        //The values will accumulate up to 3 micro-batches
         windowedStream.count().print();
 
         // Start the application and wait for termination signal
